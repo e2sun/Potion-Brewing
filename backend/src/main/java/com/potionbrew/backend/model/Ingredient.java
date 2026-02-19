@@ -4,21 +4,25 @@ import java.time.LocalDateTime;
 
 public class Ingredient {
     private Long id;
+    private Long potionId;
     private String title;
     private boolean completed;
-    private boolean addedToPotion;
+    private Integer orderIndex;
     private LocalDateTime createdAt;
 
     public Ingredient() {
         this.createdAt = LocalDateTime.now();
         this.completed = false;
-        this.addedToPotion = false;
     }
 
     // Getters
 
     public Long getId() {
         return id;
+    }
+
+    public Long getPotionId() {
+        return potionId;
     }
 
     public String getTitle() {
@@ -29,8 +33,8 @@ public class Ingredient {
         return completed;
     }
 
-    public boolean isAddedToPotion(){
-        return addedToPotion;
+    public Integer getOrderIndex() {
+        return orderIndex;
     }
 
     public LocalDateTime getCreatedAt(){
@@ -41,6 +45,10 @@ public class Ingredient {
         this.id = id;
     }
 
+    public void setPotionId(Long potionId) {
+        this.potionId = potionId;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -49,8 +57,8 @@ public class Ingredient {
         this.completed = completed;
     }
 
-    public void setAddedToPotion(boolean addedToPotion){
-        this.addedToPotion = addedToPotion;
+    public void setOrderIndex(Integer orderIndex) {
+        this.orderIndex = orderIndex;
     }
 
     public void setCreatedAt(LocalDateTime createdAt){
