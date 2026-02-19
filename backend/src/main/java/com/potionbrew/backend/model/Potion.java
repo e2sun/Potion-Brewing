@@ -79,4 +79,37 @@ public class Potion {
         this.pointsEarned = pointsEarned;
     }
 
+    // Helper Methods
+    
+    // Return the total number of completed ingredients in a potion
+    public int getCompletedCount(){
+        int completedCount = 0;
+        for (int i = 0; i < ingredients.size(); i++){
+            Ingredient ing = ingredients.get(i);
+            if (ing != null && ing.isCompleted()){
+                completedCount+=1;
+            }
+        }
+        return completedCount;
+    }
+
+    // Return the potion completion percentage
+    public int getCompletionPercentage(){
+        int totalIngredients = ingredients.size();
+        if (totalIngredients == 0) {
+            return 0;
+        }
+        int completedCount = getCompletedCount();
+        return (completedCount * 100) / totalIngredients;
+    }
+
+    // Returns true if tasks are all completed, false otherwise
+    public boolean isFullyBrewed(){
+        int totalIngredients = ingredients.size();
+        if (totalIngredients == 0){
+            return false;
+        }
+        return totalIngredients == getCompletedCount();
+    }
+  
 }
