@@ -11,3 +11,11 @@ public class BackendApplication {
 	}
 
 }
+
+// Run Application
+
+// cd backend
+// mvn clean spring-boot:run
+// mvn clean spring-boot:run
+
+// test branch comment
