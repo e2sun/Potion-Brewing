@@ -1,6 +1,7 @@
 package com.potionbrew.backend.model;
 
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Ingredient {
     private Long id;
@@ -9,6 +10,7 @@ public class Ingredient {
     private boolean completed;
     private Integer orderIndex;
     private LocalDateTime createdAt;
+    private LocalDate deadline;
 
     public Ingredient() {
         this.createdAt = LocalDateTime.now();
@@ -41,6 +43,12 @@ public class Ingredient {
         return createdAt;
     }
 
+    public LocalDate getDeadline(){
+        return deadline;
+    }
+
+    // Setters
+
     public void setId(Long id){
         this.id = id;
     }
@@ -63,5 +71,9 @@ public class Ingredient {
 
     public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt = createdAt;
+    }
+
+    public void setDeadline(LocalDate deadline){
+        this.deadline = deadline;
     }
 }

@@ -4,4 +4,5 @@ export interface Ingredient {
     completed: boolean;
     addedToPotion: boolean;
     createdAt: string;
+    deadline?: string;
 }
