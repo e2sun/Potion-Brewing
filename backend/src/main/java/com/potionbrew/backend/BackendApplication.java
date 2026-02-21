@@ -14,8 +14,8 @@ public class BackendApplication {
 
 // Run Application
 
-// cd potion-brewing
-// .mvnw spring-boot: run
-// mvn spring-boot: run
+// cd backend
+// mvn clean spring-boot:run
+// mvn clean spring-boot:run
 
 // test branch comment
