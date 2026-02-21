@@ -23,8 +23,8 @@ public class PotionRepository {
     }
 
     // find a potion by an ID
-    public Optional<Potion> findById(Long id){
-        return Optional.ofNullable(potions.get(id));
+    public Potion findByIdOrNull(Long id){
+        return potions.get(id);
     }
 
     // find all potions
